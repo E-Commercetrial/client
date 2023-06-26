@@ -1,8 +1,10 @@
 // app/providers.tsx
 'use client'
 
+import Footer from '@/components/Footer'
+import Navbar from '@/components/Navbar'
 import { CacheProvider } from '@chakra-ui/next-js'
-import { ChakraProvider } from '@chakra-ui/react'
+import { Box, ChakraProvider, Container } from '@chakra-ui/react'
 
 export function Providers({ 
     children 
@@ -12,7 +14,11 @@ export function Providers({
   return (
     <CacheProvider>
       <ChakraProvider>
+        <Box>
+        <Navbar/>
         {children}
+          <Footer />
+          </Box>
       </ChakraProvider>
     </CacheProvider>
   )

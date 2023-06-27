@@ -2,6 +2,7 @@ import ProductCard from "@/components/Card";
 import CategoryCard from "@/components/CategoryCard";
 import Features from "@/components/Featurers";
 import Hero from "@/components/Hero";
+import Link from "next/link";
 import React from "react";
 export default function Home() {
 
@@ -89,7 +90,11 @@ export default function Home() {
         }}
       >
         {products.map((product) => (
+          <Link
+          href={"/products/"+product.id}
+          >
           <ProductCard key={product.id} />
+          </Link>
         ))}
       </div>
     </>

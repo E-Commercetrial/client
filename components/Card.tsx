@@ -11,8 +11,10 @@ import {
     chakra,
     Tooltip,
   } from '@chakra-ui/react';
+import Link from 'next/link';
   import { BsStar, BsStarFill, BsStarHalf } from 'react-icons/bs';
   import { FiShoppingCart } from 'react-icons/fi';
+  import { useRouter } from 'next/navigation'
   
   const data = {
     isNew: true,
@@ -58,6 +60,8 @@ import {
   }
   
   function ProductCard() {
+    const router = useRouter();
+    
     return (
       <Flex
         p={10}
@@ -66,13 +70,16 @@ import {
         justifyContent="center"
        
       >
-        <Box
+
+     <Box
           bg={useColorModeValue("white", "gray.800")}
           maxW="sm"
           borderWidth="1px"
           rounded="lg"
           shadow="lg"
           position="relative"
+
+          onClick = {() => router.push(`/products/2`)}
           
         >
           {data.isNew && (
@@ -136,6 +143,7 @@ import {
             </Flex>
           </Box>
         </Box>
+
       </Flex>
     );
   }

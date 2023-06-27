@@ -36,7 +36,7 @@ const NavLink = ({ children }: { children: ReactNode }) => (
         ? '/categories'
 
         : '/contact'
-        
+
     }>
     {children}
   </Link>
@@ -47,8 +47,10 @@ export default function Navbar() {
 
   return (
 
-      <Box bg={useColorModeValue('gray.100', 'gray.900')} px={4}
+      <Box  px={4}
 
+        bg={useColorModeValue('gray.100', 'gray.900')}
+      
       >
         <Flex h={16} alignItems={'center'} justifyContent={'space-between'}>
           <IconButton
@@ -57,6 +59,8 @@ export default function Navbar() {
             aria-label={'Open Menu'}
             display={{ md: 'none' }}
             onClick={isOpen ? onClose : onOpen}
+
+            
           />
           <HStack spacing={8} alignItems={'center'}>
             <Box>Logo</Box>

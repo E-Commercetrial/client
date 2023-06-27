@@ -12,9 +12,20 @@ import {
   createIcon,
 } from '@chakra-ui/react';
 
+const path ="src/main.jpg"
+
+//client\public\src\main.jpg
+
 export default function Hero() {
   return (
-    <>
+    <Box
+    backgroundImage={`url(${path})`}
+
+    backgroundRepeat={"no-repeat"}
+    backgroundSize={"cover"}
+    backgroundPosition={"center"}
+
+    >
       <Head>
         <link
           href="https://fonts.googleapis.com/css2?family=Caveat:wght@700&display=swap"
@@ -22,9 +33,19 @@ export default function Hero() {
         />
       </Head>
 
-      <Container maxW={"3xl"}>
+      <Container maxW={"3xl"}
+    
+
+
+        backgroundPosition={"center"}
+        backgroundRepeat={"no-repeat"}
+        backgroundSize={"cover"}
+   
+        
+    
+      >
         <Stack
-          backgroundImage={"../public/src/main.jpg"}
+      
           as={Box}
           textAlign={"center"}
           spacing={{ base: 8, md: 14 }}
@@ -34,13 +55,16 @@ export default function Hero() {
             fontWeight={600}
             fontSize={{ base: "2xl", sm: "4xl", md: "6xl" }}
             lineHeight={"110%"}
+            color={"white"}
           >
             Make money from <br />
             <Text as={"span"} color={"#FAC452"}>
               your audience
             </Text>
           </Heading>
-          <Text color={"gray.500"}>
+
+        
+          <Text color={"gray.200"}>
             Monetize your content by charging your most loyal readers and reward
             them loyalty points. Give back to your loyal readers by granting
             them access to your pre-releases and sneak-peaks.
@@ -89,7 +113,7 @@ export default function Hero() {
           </Stack>
         </Stack>
       </Container>
-    </>
+    </Box>
   );
 }
 

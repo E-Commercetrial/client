@@ -1,12 +1,13 @@
+"use client ";
 import ProductCard from "@/components/Card";
 import CategoryCard from "@/components/CategoryCard";
 import Features from "@/components/Featurers";
 import Hero from "@/components/Hero";
 import Link from "next/link";
 import React from "react";
-export default function Home() {
 
-  //TODO: COMPONENTLER ARASINDAKİ BOŞLUKLARI FİXLE
+export default function Home() {
+  //TODO: COMPONENTLER ARASINDAKİ BOŞLUKLARI FİXLEd
   const products = [
     {
       id: 1,
@@ -22,39 +23,33 @@ export default function Home() {
     },
   ];
 
-    
   const data = [
     {
       imageURL:
         "https://websitedemos.net/furniture-shop-04/wp-content/uploads/sites/1116/2022/07/cat-1-400x400.jpg",
-      name: "Tepsiler",
+      name: "BEDROOM",
     },
     {
       imageURL:
         "https://websitedemos.net/furniture-shop-04/wp-content/uploads/sites/1116/2022/07/cat-1-400x400.jpg",
-      name: "Fincan Takımı",
+      name: "HOME",
     },
     {
       imageURL:
         "https://websitedemos.net/furniture-shop-04/wp-content/uploads/sites/1116/2022/07/cat-1-400x400.jpg",
-      name: "Kahvaltılık Takımı",
+      name: "HOME",
     },
     {
       imageURL:
         "https://websitedemos.net/furniture-shop-04/wp-content/uploads/sites/1116/2022/07/cat-1-400x400.jpg",
-      name: "Özel Tasarım Ürünler",
-    },
-    {
-      imageURL:
-        "https://websitedemos.net/furniture-shop-04/wp-content/uploads/sites/1116/2022/07/cat-2-300x300.jpg",
-      name: "Doğal Taşlar",
+      name: "HOME",
     },
   ];
-  
 
   return (
-    <>
+    <div>
       <Hero />
+
       <div
         style={{
           padding: "0.5rem",
@@ -68,7 +63,7 @@ export default function Home() {
         style={{
           display: "grid",
           gridTemplateColumns: "repeat(auto-fit, minmax(100px, 1fr))",
-          gridGap: "0.1rem", // Grid boşluğunu istediğiniz değerle değiştirin
+          gridGap: "0.01rem", // Grid boşluğunu istediğiniz değerle değiştirin
         }}
       >
         {data.map((item) => (
@@ -81,17 +76,12 @@ export default function Home() {
           display: "grid",
           gridTemplateColumns: "repeat(auto-fit, minmax(300px, 1fr))",
           gridGap: "0.2rem",
-          backgroundColor: "#FBCE7B",
         }}
       >
-        {products.map((product) => (
-          <Link
-          href={"/products/"+product.id}
-          >
-          <ProductCard key={product.id} />
-          </Link>
+        {products.map((item) => (
+          <ProductCard />
         ))}
       </div>
-    </>
+    </div>
   );
 }

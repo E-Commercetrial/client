@@ -13,8 +13,13 @@ export function Providers({
   }) {
   return (
     <CacheProvider>
-      <ChakraProvider>
-        <Box>
+      <ChakraProvider
+        resetCSS
+    
+      >
+        <Box
+          bg={"white"}
+        >
         <Navbar/>
         {children}
           <Footer />

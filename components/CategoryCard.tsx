@@ -19,7 +19,7 @@ import {
   
   function CategoryCard({ data}: { data: any}) {
     return (
-      <Flex p={50} w="full" alignItems="center" justifyContent="center">
+      <Flex p={30} w="full" alignItems="center" justifyContent="center">
         <Box
           bg={useColorModeValue('white', 'gray.800')}
           width={{ base: 'full', md: 64 }}
@@ -41,7 +41,7 @@ import {
             <Box display="flex" alignItems="baseline">
               
             </Box>
-            <Flex mt="1" justifyContent="space-between" alignContent="center"
+            <Flex mt="1" justifyContent="center" alignContent="center"
             alignItems="center"
             >
               <Box

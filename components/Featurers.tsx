@@ -1,7 +1,7 @@
 
 "use client"
-import { ReactElement } from 'react';
 import { Box, SimpleGrid, Icon, Text, Stack, Flex } from '@chakra-ui/react';
+import { ReactElement } from 'react';
 import { FcAssistant, FcDonate, FcInTransit } from 'react-icons/fc';
 
 interface FeatureProps {
@@ -32,27 +32,35 @@ const Feature = ({ title, text, icon }: FeatureProps) => {
 
 export default function Features() {
   return (
-    <Box p={4}>
-      <SimpleGrid columns={{ base: 1, md: 3 }} spacing={10}>
+    <Box px={221} py={30} backgroundColor={"#FBCE7B"}>
+      <SimpleGrid
+        columns={{ base: 1, md: 5 }}
+        spacing={10}
+        justifyContent="center"
+        alignItems="center"
+        display={"flex"}
+        w={"full"}
+        px={100}
+      >
         <Feature
           icon={<Icon as={FcAssistant} w={10} h={10} />}
-          title={'Lifetime Support'}
+          title={"Lifetime Support"}
           text={
-            'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore...'
+            "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore..."
           }
         />
         <Feature
           icon={<Icon as={FcDonate} w={10} h={10} />}
-          title={'Unlimited Donations'}
+          title={"Unlimited Donations"}
           text={
-            'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore...'
+            "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore..."
           }
         />
         <Feature
           icon={<Icon as={FcInTransit} w={10} h={10} />}
-          title={'Instant Delivery'}
+          title={"Instant Delivery"}
           text={
-            'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore...'
+            "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore..."
           }
         />
       </SimpleGrid>
